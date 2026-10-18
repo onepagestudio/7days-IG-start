@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 天穿戴甲品牌帳號啟動包｜RVEA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F0E6; --paper:#FFFCF6; --ink:#3B2A20; --ink2:#6B5546; --mute:#9A8676;
+  --line:#E6D9C7; --beige:#E9DCC8; --beige2:#D8C4A8; --accent:#7A5A44; --ok:#5E7A55; --warn:#A8613A;
+  --r:16px; --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-text-size-adjust:100%}
+button,input,textarea,select{font:inherit;color:inherit}
+a{color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px 80px}
+header.top{padding:40px 0 8px;text-align:center}
+.eyebrow{letter-spacing:.28em;font-size:12px;color:var(--accent);font-weight:500}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6vw,38px);line-height:1.35;margin:10px 0 8px}
+h2{font-family:var(--serif);font-size:24px;margin:0 0 6px;line-height:1.4}
+h3{font-family:var(--serif);font-size:18px;margin:28px 0 10px}
+.sub{color:var(--ink2);margin:0}
+.meta{display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:16px 0 0}
+.pill{border:1px solid var(--beige2);border-radius:999px;padding:3px 12px;font-size:13px;color:var(--ink2);background:var(--paper)}
+.progress{margin:26px auto 0;max-width:420px}
+.bar{height:6px;background:var(--beige);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:9px;transition:width .3s}
+.progress small{display:block;text-align:center;color:var(--ink2);margin-top:6px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0 6px}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:999px;padding:10px 20px;cursor:pointer;font-weight:500;line-height:1.3}
+.btn:hover{opacity:.88}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--beige2)}
+.btn.ghost:hover{background:var(--paper)}
+.btn.sm{padding:6px 14px;font-size:14px}
+.mini{border:1px solid var(--beige2);background:var(--paper);border-radius:999px;padding:2px 12px;font-size:13px;cursor:pointer;color:var(--ink2)}
+.mini:hover{border-color:var(--accent);color:var(--accent)}
+.note{background:var(--paper);border:1px dashed var(--beige2);border-radius:12px;padding:12px 16px;color:var(--ink2);font-size:14px;margin:18px 0}
+.note b{color:var(--ink)}
+.warn{border-color:#E2B394;background:#FFF6EF;color:#7B4A2C}
+/* home cards */
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:26px}
+.day{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px;cursor:pointer;text-align:left;transition:transform .15s,border-color .15s;position:relative}
+.day:hover{transform:translateY(-2px);border-color:var(--beige2)}
+.day .n{font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--accent)}
+.day .t{font-family:var(--serif);font-size:19px;font-weight:700;margin:4px 0 6px;line-height:1.45}
+.day .o{font-size:14px;color:var(--ink2)}
+.day .st{position:absolute;top:16px;right:16px;font-size:12px;border-radius:999px;padding:1px 10px;border:1px solid var(--beige2);color:var(--mute)}
+.day.done{border-color:var(--ok)}
+.day.done .st{background:var(--ok);border-color:var(--ok);color:#fff}
+.day.key .o::after{content:" ・重點日";color:var(--warn)}
+/* day view */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:20px 0 4px;flex-wrap:wrap}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px 24px;margin-top:10px}
+.goal{background:var(--bg);border-radius:12px;padding:14px 16px;margin:16px 0}
+.goal b{display:block;font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:500}
+ol.steps{padding-left:22px;margin:8px 0 0;color:var(--ink2)}
+ol.steps li{margin:3px 0}
+.sec{border-top:1px solid var(--line);margin-top:26px;padding-top:4px}
+.sec-t{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:18px;margin:20px 0 12px;font-weight:700}
+.sec-t span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:13px;font-family:var(--sans)}
+.field{display:block;margin:0 0 18px}
+.lb{display:block;font-weight:500;margin-bottom:6px}
+.lb em{font-style:normal;font-weight:400;font-size:13px;color:var(--mute)}
+.field small,.out small{display:block;color:var(--mute);font-size:13px;margin-top:5px;line-height:1.6}
+input[type=text],textarea,select{width:100%;border:1px solid var(--beige2);background:#fff;border-radius:10px;padding:10px 12px;outline:none}
+input[type=text]:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(122,90,68,.12)}
+textarea{resize:vertical;line-height:1.7}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--beige2);background:#fff;border-radius:999px;padding:6px 14px;cursor:pointer;font-size:14px;line-height:1.4}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip:disabled{opacity:.4;cursor:not-allowed}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.check{display:flex;gap:10px;align-items:flex-start;cursor:pointer;margin:6px 0 16px}
+.check input{width:18px;height:18px;margin-top:4px;accent-color:var(--ink)}
+.gen{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0 6px}
+.out{margin:16px 0}
+.out-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;font-weight:500}
+.out-tools{display:flex;gap:8px;align-items:center}
+.cnt{font-size:12px;color:var(--mute)}
+.cnt.over{color:#B3261E;font-weight:700}
+.out textarea{background:#FFFDF9}
+.list{margin:6px 0;padding-left:20px}
+.list li{margin:3px 0}
+.okc{color:var(--ok)} .ngc{color:#B3261E}
+.complete{margin-top:30px;padding:18px;border-radius:14px;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.complete .check{margin:0;font-weight:500}
+/* topics */
+.tcard{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0;background:#fff}
+.tcard.fav{border-color:var(--accent);box-shadow:0 0 0 2px rgba(122,90,68,.08)}
+.tcard .tt{font-weight:700;font-family:var(--serif);font-size:17px;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.tag{font-size:12px;border-radius:6px;padding:1px 8px;background:var(--bg);color:var(--ink2)}
+.tag.c{background:var(--ink);color:var(--paper)}
+.tdet{font-size:14px;color:var(--ink2);margin-top:6px}
+.tdet b{color:var(--ink);font-weight:500}
+.tact{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+details.lib{margin-top:20px;border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:var(--bg)}
+details.lib summary{cursor:pointer;font-weight:500}
+.lrow{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.lrow:last-child{border:0}
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:12px 0}
+.fstep{flex:1 1 130px;background:#fff;border:1px solid var(--beige2);border-radius:12px;padding:10px 12px;font-size:14px;position:relative}
+.fstep b{display:block;font-family:var(--serif);font-size:15px}
+.fstep i{font-style:normal;color:var(--accent);font-size:12px;letter-spacing:.1em}
+/* checklist */
+table.cl{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0}
+table.cl th,table.cl td{border-bottom:1px solid var(--line);padding:10px 6px;text-align:left;vertical-align:middle}
+table.cl th{font-size:13px;color:var(--mute);font-weight:500}
+table.cl td.c{text-align:center;white-space:nowrap}
+.badge{font-size:12px;border-radius:999px;padding:2px 10px;display:inline-block}
+.badge.y{background:#E6EFE1;color:var(--ok)} .badge.n{background:#F4E9E1;color:var(--warn)}
+/* result card */
+.card{background:#fff;border:1px solid var(--beige2);border-radius:18px;padding:28px 24px}
+.card .ch{text-align:center;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:10px}
+.card .ch h2{font-size:26px}
+.cs{margin:16px 0;break-inside:avoid}
+.cs h4{font-family:var(--serif);font-size:15px;letter-spacing:.08em;color:var(--accent);margin:0 0 6px;border-left:3px solid var(--beige2);padding-left:10px}
+.cs .pre{white-space:pre-wrap;font-size:14px;line-height:1.75}
+.kw{display:flex;gap:8px;flex-wrap:wrap}
+.kw span{border:1px solid var(--ink);border-radius:999px;padding:2px 14px;font-size:14px}
+.empty{color:var(--mute);font-size:14px}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:10px 20px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:9;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{text-align:center;color:var(--mute);font-size:12px;margin-top:40px;letter-spacing:.08em}
+#printArea{display:none}
+@media (max-width:640px){
+  .panel{padding:22px 16px}
+  .grid2{grid-template-columns:1fr}
+  .card{padding:20px 14px}
+  table.cl{font-size:14px}
+}
+@page{size:A4 landscape;margin:12mm}
+@media print{
+  html,body{background:#fff}
+  #app,#toast,header.top,footer{display:none!important}
+  #printArea{display:block}
+  #printArea .card{border:0;padding:0;border-radius:0}
+  #printArea .cols{column-count:2;column-gap:12mm}
+  .cs .pre{font-size:11.5pt}
+  body{font-size:11.5pt}
+}
+details.tcard summary::-webkit-details-marker{display:none}
+.btn.gen-btn{background:linear-gradient(135deg,#E7A99A 0%,#D98C7E 55%,#C97B8E 100%);border-color:transparent;color:#fff;font-weight:700;padding:12px 24px;box-shadow:0 6px 16px rgba(201,123,142,.28);letter-spacing:.04em;transition:transform .15s,box-shadow .15s}
+.btn.gen-btn::before{content:"✦ ";}
+.btn.gen-btn:hover{opacity:1;transform:translateY(-1px);box-shadow:0 8px 20px rgba(201,123,142,.36)}
+.btn.gen-btn:active{transform:scale(.96)}
+.btn.gen-btn.pulse{animation:gpulse .45s ease-out}
+@keyframes gpulse{0%{transform:scale(1)}35%{transform:scale(1.08)}100%{transform:scale(1)}}
+.spark{position:fixed;pointer-events:none;z-index:20;font-size:14px;color:#D98C7E;transform:translate(-50%,-50%);animation:spark .65s ease-out forwards}
+.spark.d{width:7px;height:7px;border-radius:50%;background:#E9C46A;font-size:0}
+.spark.p{color:#C97B8E}
+@keyframes spark{0%{opacity:1;transform:translate(-50%,-50%) scale(.4)}70%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(1) rotate(var(--r))}}
+.out.reveal{animation:reveal .4s ease-out both}
+@keyframes reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.spark,.btn.gen-btn.pulse,.out.reveal{animation:none!important}.spark{display:none}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="printArea"></div>
+<div id="toast"></div>
+<input type="file" id="restoreFile" accept="application/json,.json" hidden>
+<script>
+const KEY='rvea_7day_lite_v2';
+const DAYS=[
+ {n:1,t:'一句話說清楚你的品牌',o:'品牌定位句＋3 個關鍵字',todo:'點選 5 個選項，拿到一句可以放在自介和貼文裡的品牌定位。'},
+ {n:2,t:'IG 名稱與自介',o:'可直接貼上的名稱與自介',todo:'選詢問方式，產出名稱和自介，不喜歡就按「換一版」，複製貼到 IG。'},
+ {n:3,t:'3 則限動，做成精選',o:'3 則直接能發的限動',todo:'複製 3 段文字，各配一張作品照發成限動，再加進精選動態。做完帳號就有「作品、尺寸、訂購」三個入口。'},
+ {n:4,t:'3 個最好上手的題目',o:'3 個專屬題目',todo:'按一下，拿到 3 個依你品牌挑好、新手最容易拍的題目，不喜歡的按「換一題」。'},
+ {n:5,t:'完成第一篇貼文',o:'1 篇可以發布的輪播',todo:'從 3 個題目中選 1 題，寫一句你的真實經驗，拿到 7 頁輪播文字和內文。'},
+ {n:6,t:'有人來問時怎麼接',o:'下單流程＋2 則回覆範本',todo:'填入你的價格、交期、尺寸方式，拿到下單流程和兩則私訊回覆。'},
+ {n:7,t:'檢查並正式啟動',o:'品牌啟動成果卡',todo:'到 IG 確認每一項都設定好了，列印或存下你的成果卡。'}
+];
+const OPT={
+ styles:['裸色／自然系','法式','貓眼','暈染','手繪','立體雕花','鑽飾／華麗款','極簡線條','漸層','新娘款'],
+ vibe:['奶油溫柔','清透日系','韓系簡約','華麗貴氣','個性酷感','甜美可愛'],
+ clients:['上班族','新娘','活動與拍照場合','忙碌的媽媽','不方便做光療的人','短指甲或咬甲','扇形甲／寬甲床','第一次買穿戴甲的人'],
+ features:['1:1 翻模客製','公版尺寸現貨','手工繪製','可重複配戴','提供尺寸測量教學','講究薄度與貼合'],
+ feel:['自在','有質感','安心','特別','省時','自信'],
+ channels:['IG 私訊','官方 LINE','賣貨便','品牌官網','其他'],
+ sizeWay:['客人自行量測後對照尺寸表','寄送尺寸片試戴','客人提供指甲照片由我評估']
+};
+const FEELP={'自在':'戴得自在','有質感':'看起來有質感','安心':'買得安心','特別':'擁有屬於自己的特別','省時':'省下整理的時間','自信':'更有自信'};
+const KWV={'奶油溫柔':'溫柔','清透日系':'清透','韓系簡約':'簡約','華麗貴氣':'精緻','個性酷感':'個性','甜美可愛':'甜美'};
+const KWF={'1:1 翻模客製':'貼合','公版尺寸現貨':'即買即戴','手工繪製':'手繪','可重複配戴':'可重複','提供尺寸測量教學':'尺寸安心','講究薄度與貼合':'輕薄'};
+const TAGMAP={'裸色／自然系':'nude','法式':'french','貓眼':'cateye','暈染':'gradient','手繪':'hand','立體雕花':'3d','鑽飾／華麗款':'bling','極簡線條':'minimal','漸層':'gradient','新娘款':'bride',
+ '上班族':'office','新娘':'bride','活動與拍照場合':'event','忙碌的媽媽':'mom','不方便做光療的人':'nolight','短指甲或咬甲':'short','扇形甲／寬甲床':'wide','第一次買穿戴甲的人':'first',
+ '1:1 翻模客製':'custom','公版尺寸現貨':'stock','手工繪製':'hand','可重複配戴':'reuse','提供尺寸測量教學':'size','講究薄度與貼合':'custom'};
+const CAT={A:{n:'吸引新客',cta:'先收藏起來，挑款時用得到。'},B:{n:'建立信任',cta:'還有想問的，留言告訴我。'},C:{n:'展示作品',cta:'最喜歡哪一款？留言告訴我。'},D:{n:'引導購買',cta:''}};
+const QUOTA={B:1,A:1,D:1};
+const TOPIC_SRC=`為什麼同樣是裸色，戴起來的感覺差很多？|A|輪播|nude,minimal,office|膚色冷暖調與裸色的搭配／甲面透度與光澤的差異／不同膚色的實戴對比
+扇形甲怎麼選穿戴甲，才不容易顯寬？|A|輪播|wide,custom|杏仁、橢圓、方圓甲型的視覺差異／側邊收窄的做法／顯寬與修飾的實戴對比
+短指甲也能戴穿戴甲嗎？先看這 3 件事|A|Reels|short,first|甲床長度與延長比例／邊緣貼合的處理／建議的長度範圍
+上班也不會太誇張的 5 款日常穿戴甲|A|輪播|office,minimal,nude|每款適合的場合／色系與長度的選擇／實戴手部照片
+婚禮的穿戴甲，最晚什麼時候要開始準備？|A|輪播|bride,custom|依製作時間倒推準備日期／試戴與修改需要的時間／和婚紗造型的配色
+不能做光療的人，可以怎麼擁有完整的美甲？|A|Reels|nolight,first|哪些情況不方便做光療／穿戴甲可以怎麼取代／配戴與卸除的步驟
+同一款法式，長度不同，手看起來差在哪？|A|輪播|french,minimal|三種長度的實戴對比／和指節比例的關係／適合的手型
+貓眼穿戴甲在室內和戶外，看起來差多少？|A|Reels|cateye|同一副在不同光線下的拍攝／光帶位置的差異／挑色的建議
+媽媽也能每天戴穿戴甲嗎？做家事前後怎麼處理|A|Reels|mom,reuse|適合的長度與甲型／做家事時的注意事項／快速拆戴示範
+拍照場合用的穿戴甲，和日常款差在哪？|A|輪播|event,bling|上鏡的顏色與反光／裝飾的比例／只戴一天的配戴方式
+手繪穿戴甲近看是什麼樣子？微距拍給你看|A|Reels|hand,3d|筆觸細節特寫／層次與厚度／和貼紙款的差別
+第一次戴穿戴甲最常犯的 3 個錯誤|A|Reels|first,size|甲面清潔沒做好／尺寸選太大／膠量不對
+第一次買穿戴甲，尺寸應該怎麼量？|B|輪播|size,first,custom|需要準備的工具／每一指的量法／量完怎麼對照尺寸
+你適合公版穿戴甲還是 1:1 訂製？|B|輪播|custom,stock,first|兩者的差異／適合的甲型與需求／怎麼判斷自己適合哪種
+一副穿戴甲從製作到完成，經過哪些步驟？|B|Reels|custom,hand|甲片的處理與打底／造型與封層／檢查與包裝
+為什麼有些穿戴甲戴起來會翹？|B|輪播|size,custom,wide|甲片弧度和甲床弧度不合／尺寸偏大／底部沒有處理
+厚度看不出來，但戴起來差很多|B|輪播|custom,minimal|側面厚度的對比／收邊的處理／對舒適度的影響
+一副穿戴甲可以戴幾次？影響次數的 4 件事|B|輪播|reuse,first|固定用膠的種類／保存的方式／卸除的方式
+穿戴甲會傷指甲嗎？配戴與卸除的正確方式|B|輪播|first,reuse,nolight|容易傷甲的常見原因／正確的卸除步驟／不建議的硬拔方式
+穿戴甲收到後怎麼保存，下次才能再戴？|B|輪播|reuse,stock|清除殘膠的方法／收納與避光／保存時不要做的事
+鑽飾款怎麼做，才不容易勾頭髮、勾衣服？|B|Reels|bling,3d,bride|鑽的排列與高度／封層的包覆／配戴的建議
+尺寸介於兩號之間，該選大還是選小？|B|輪播|size,stock|判斷的原則／可以怎麼修磨／什麼情況建議客製
+這個系列的靈感，從哪裡來？|C|輪播|hand,gradient|靈感來源圖／配色的過程／完成的作品
+同一款設計，做成三種顏色|C|輪播|gradient,nude|三色實戴對比／各自適合的場合／請大家投票
+一款設計從草稿到成品|C|Reels|hand,3d|草稿／試色／成品縮時
+我做穿戴甲的原因，和我想堅持的事|C|單圖＋長文案|custom,minimal|開始的契機／對品質的堅持／希望客人得到什麼
+法式也可以有很多樣子：5 種法式變化|C|輪播|french,office|細邊法式／斜法式／雙線法式
+新娘款的配色，怎麼和婚紗搭？|C|輪播|bride,bling|婚紗白的冷暖差異／珍珠與鑽的比例／實戴範例
+一副作品的近拍細節|C|Reels|3d,hand,bling|微距鏡頭／轉動光線看層次／甲面與側邊的細節
+極簡款為什麼反而最難做？|C|輪播|minimal,nude|線條與留白／瑕疵更明顯／比例的控制
+貓眼的 4 種吸法，效果差在哪？|C|輪播|cateye|一字／斜角／滿版
+開箱：客人收到的會是什麼|C|Reels|stock,custom,first|包裝內容物／配件／說明卡
+訂購流程一次看懂：從詢問到收到|D|輪播|first,custom,stock|詢問／確認尺寸／付款與出貨
+客製訂單需要提供哪些資料？|D|輪播|custom,size|尺寸／指甲照片／款式參考與使用日期
+現貨款和客製款，怎麼選比較適合你|D|輪播|stock,custom|使用的時間／甲型需求／等待時間
+婚禮或活動用，最晚多久前要訂？|D|輪播|bride,event,custom|依你的實際交期倒推／試戴的時間／預留修改的時間
+價格怎麼算？款式、長度和裝飾的差別|D|輪播|custom,bling,3d|影響價格的因素／加價項目（依你的價目表）／怎麼詢價
+收到後尺寸不合怎麼辦？|D|輪播|size,stock|你的售後規定／修改的方式／事前怎麼預防
+第一次私訊不知道要說什麼？直接複製這段|D|限動|first|詢問範本／需要附上的資料／回覆時間
+指甲照片怎麼拍，客製才會更準？|D|輪播|custom,size,wide|光線／角度／需要拍幾張`;
+const TOPICS=TOPIC_SRC.trim().split('\n').map((l,i)=>{const [t,c,f,tg,k]=l.split('|');return {id:i+1,t,c,f,tags:tg.split(','),k:k.split('／')}});
+const T=id=>TOPICS.find(x=>x.id==id);
+
+function blank(){return {done:{},d1:{},d1o:{},d2:{v:0},d2o:{},d3:{},d3o:{},d4:{rec:[],skip:[],seed:0},d5:{},d5o:{},d6:{},d6o:{},d7:{}}}
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&typeof s==='object')return Object.assign(blank(),s)}catch(e){}return null}
+let S=load()||blank();let saveFail=false;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){if(!saveFail){toast('這個瀏覽器無法自動儲存，請記得按「備份」');saveFail=true}}}
+function getP(p){return p.split('.').reduce((o,k)=>o==null?undefined:o[k],S)}
+function setP(p,v){const ks=p.split('.');let o=S;for(let i=0;i<ks.length-1;i++){if(typeof o[ks[i]]!=='object'||o[ks[i]]===null)o[ks[i]]={};o=o[ks[i]]}o[ks[ks.length-1]]=v;save()}
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const arr=p=>Array.isArray(getP(p))?getP(p):[];
+const tx=p=>{const v=getP(p);return typeof v==='string'?v.trim():''};
+const J=(a,s='、')=>a.filter(Boolean).join(s);
+const or=(v,ph)=>v&&String(v).trim()?String(v).trim():`【請填寫：${ph}】`;
+const len=s=>Array.from(String(s||'')).length;
+const short=s=>String(s).replace(/／.*$/,'');
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),2400)}
+function copyText(s){const done=()=>toast('已複製');
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(s).then(done,fb)}else fb();
+ function fb(){const ta=document.createElement('textarea');ta.value=s;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){toast('複製失敗，請手動選取')}ta.remove()}}
+function download(name,content,type){const b=new Blob([content],{type});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
+const oth=p=>tx(p).split(/[、,，\/／\s]+/).map(x=>x.trim()).filter(Boolean);
+function chList(){return arr('d6.channels').map(c=>c==='其他'?(tx('d6.chOther')||'其他方式'):c)}
+function B(){const styles=[...arr('d1.styles'),...oth('d1.stylesOther')],cl=[...arr('d1.clients'),...oth('d1.clientsOther')],ft=[...arr('d1.features'),...oth('d1.featuresOther')];
+ const vibes=[...arr('d1.vibe'),...oth('d1.vibeOther')],feels=[...arr('d1.feel'),...oth('d1.feelOther')];
+ return {brand:tx('d1.brand'),name:tx('d1.brand')||'【品牌名稱】',styles,vibes,vibe1:J(vibes),cl,ft,feels,custom:ft.includes('1:1 翻模客製'),stock:ft.includes('公版尺寸現貨'),sizeTeach:ft.includes('提供尺寸測量教學'),ch:chList()}}
+function contactCTA(){const ch=arr('d6.channels');
+ if(ch.includes('IG 私訊'))return '想問尺寸或款式，直接私訊我。';
+ if(ch.includes('官方 LINE'))return '詢問與訂購，請點自介的 LINE 連結。';
+ if(ch.includes('賣貨便'))return '想下單，請點自介的賣貨便連結。';
+ if(ch.includes('品牌官網'))return '款式與訂購，請點自介連結到官網。';
+ if(ch.includes('其他'))return tx('d6.chOther')?`詢問與訂購：${tx('d6.chOther')}`:'詢問方式請看自介。';
+ return '詢問方式請看自介。'}
+function bioCTA(){const ch=arr('d6.channels');
+ if(ch.includes('IG 私訊'))return '尺寸／訂購｜直接私訊';
+ if(ch.includes('官方 LINE'))return 'LINE 詢問與訂購 ↓';
+ if(ch.includes('賣貨便'))return '賣貨便下單 ↓';
+ if(ch.includes('品牌官網'))return '官網訂購 ↓';
+ if(ch.includes('其他'))return tx('d6.chOther')?`訂購｜${tx('d6.chOther')}`:'【請填寫：詢問方式】';
+ return '【請選擇詢問方式】'}
+const tagsLine=()=>{const b=B();return `#穿戴甲 ${b.custom?'#穿戴甲訂製 ':''}#pressonnails ${b.styles[0]?'#'+short(b.styles[0])+'穿戴甲 ':''}${b.brand?'#'+b.brand.replace(/\s/g,''):''}`.trim()};
+
+/* UI */
+function F(label,path,o={}){const v=esc(getP(path)||'');const ph=esc(o.ph||'');
+ const inp=o.rows?`<textarea data-k="${path}" rows="${o.rows}" placeholder="${ph}">${v}</textarea>`:`<input type="text" data-k="${path}" value="${v}" placeholder="${ph}">`;
+ return `<label class="field"><span class="lb">${label}${o.opt?' <em>可空白</em>':''}</span>${inp}${o.hint?`<small>${o.hint}</small>`:''}</label>`}
+function C(label,path,opts,o={}){const multi=o.multi!==false;const cur=multi?arr(path):getP(path);
+ return `<div class="field"><span class="lb">${label}${o.max?` <em>選 ${o.max===1?'1':'1–'+o.max} 個</em>`:multi?' <em>可複選，不限數量</em>':''}</span><div class="chips">${opts.map(x=>{const on=multi?cur.includes(x):cur===x;const dis=o.disabled&&o.disabled.includes(x);return `<button type="button" class="chip${on?' on':''}" data-chip="${path}" data-v="${esc(x)}" data-multi="${multi?1:0}" data-max="${o.max||0}"${o.re?' data-re="1"':''}${dis?' disabled':''}>${esc(x)}</button>`}).join('')}</div>${o.other?`<input type="text" data-k="${o.other}" value="${esc(getP(o.other)||'')}" placeholder="${o.multi===false?'其他：自己填寫（填了會以這個為準）':'其他：自己填寫，多個用「、」分開'}" style="margin-top:8px">`:''}${o.hint?`<small>${o.hint}</small>`:''}</div>`}
+function O(label,path,o={}){const v=getP(path)||'';
+ return `<div class="out"><div class="out-h"><span>${label}</span><span class="out-tools">${o.max?`<span class="cnt" data-cnt="${path}" data-max="${o.max}"></span>`:''}${o.extra||''}<button type="button" class="mini" data-copy="${path}">複製</button></span></div><textarea data-k="${path}" rows="${o.rows||4}">${esc(v)}</textarea>${o.note?`<small>${o.note}</small>`:''}</div>`}
+function CK(label,path,o={}){return `<label class="check"><input type="checkbox" data-k="${path}"${getP(path)?' checked':''}${o.re?' data-re="1"':''}><span>${label}</span></label>`}
+function genBtn(act,has,label){return `<div class="gen"><button class="btn gen-btn" data-act="${act}">${has?'重新產出':label}</button>${has?'<small style="color:var(--mute)">下方內容可以直接修改，會自動儲存</small>':''}</div>`}
+
+/* 首頁 */
+const doneCount=()=>DAYS.filter(d=>S.done['d'+d.n]).length;
+function home(){const n=doneCount();
+ return `<div class="wrap"><header class="top"><div class="eyebrow">RVEA · LIVE EXCLUSIVE GIFT</div>
+ <h1>7 天，建立你的第一個<br>穿戴甲品牌帳號</h1>
+ <p class="sub">每天 10 分鐘，只做一件事，馬上拿到成果。</p>
+ <div class="meta"><span class="pill">直播限定贈禮・不對外販售</span></div>
+ <div class="progress"><div class="bar"><i style="width:${n/7*100}%"></i></div><small>已完成 ${n} / 7 天</small></div></header>
+ <div class="days">${DAYS.map(d=>`<button type="button" class="day${S.done['d'+d.n]?' done':''}" data-act="go" data-d="${d.n}"><span class="st">${S.done['d'+d.n]?'已完成':'約 10 分鐘'}</span><div class="n">DAY ${d.n}</div><div class="t">${d.t}</div><div class="o">拿到：${d.o}</div></button>`).join('')}</div>
+ <div class="note">・前一天填的資料會自動帶到下一天，不用重打。<br>・資料存在<b>這台裝置的這個瀏覽器</b>，換手機前先按「備份」。<br>・沒填的地方會標成【請填寫】，工具不會替你編造價格、評價或訂單。</div>
+ <div class="toolbar"><button class="btn ghost sm" data-act="backup">備份</button><button class="btn ghost sm" data-act="restore">還原備份</button><button class="btn ghost sm" data-act="reset">清除重來</button></div>
+ <footer>RVEA · 靈感研究室</footer></div>`}
+
+/* 每日頁外框 */
+function shell(n,body){const d=DAYS[n-1];
+ return `<div class="wrap"><div class="nav"><button class="btn ghost sm" data-act="home">← 總覽</button><span class="pill">已完成 ${doneCount()} / 7</span></div>
+ <div class="panel"><div class="eyebrow">DAY ${n} ・ 約 10 分鐘</div><h2>${d.t}</h2>
+ <div class="goal"><b>今天只要做</b>${d.todo}</div>
+ ${body}
+ <div class="complete">${CK(`Day ${n} 完成了`,'done.d'+n,{re:1})}
+ <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ghost sm" data-act="ai" data-d="${n}" title="想多要幾個版本，可以貼到 ChatGPT 或 Claude">複製 AI 指令</button>${n<7?`<button class="btn sm" data-act="go" data-d="${n+1}">下一天 →</button>`:''}</div></div>
+ </div></div>`}
+const needD1=()=>arr('d1.styles').length?'':`<div class="note warn">先完成 Day 1，這裡才會依你的品牌產出。<br><button class="btn sm" data-act="go" data-d="1" style="margin-top:8px">前往 Day 1</button></div>`;
+
+/* DAY 1 */
+function day1(){const has=tx('d1o.pos');
+ return shell(1,`
+ ${F('品牌名稱','d1.brand',{opt:1,ph:'還沒決定可以先空白'})}
+ ${C('1. 你最擅長的款式','d1.styles',OPT.styles,{other:'d1.stylesOther'})}
+ ${C('2. 你的風格','d1.vibe',OPT.vibe,{other:'d1.vibeOther'})}
+ ${C('3. 最想服務的客人','d1.clients',OPT.clients,{max:2,other:'d1.clientsOther'})}
+ ${C('4. 你「實際有做到」的特色','d1.features',OPT.features,{other:'d1.featuresOther',hint:'還沒有也沒關係，不要填還做不到的。'})}
+ ${C('5. 想帶給客人的感受','d1.feel',OPT.feel,{other:'d1.feelOther'})}
+ ${genBtn('gen1',has,'產出我的品牌定位')}
+ ${has?O('我的品牌定位','d1o.pos',{rows:4})+O('3 個品牌關鍵字','d1o.kw',{rows:1}):''}`)}
+function gen1(){const b=B();if(!b.styles.length||!b.cl.length){toast('請至少選擇（或填寫）款式和客人');return}
+ const top=a=>a.length>3?J(a.slice(0,3))+'等':J(a);
+ const fl=b.feels.map(f=>FEELP[f]||'感到'+f);
+ S.d1o.pos=`${b.name}是為${J(b.cl)}設計的${b.vibes.length?top(b.vibes)+'風':''}穿戴甲品牌，以${top(b.styles.map(short))}為主${b.ft.length?`，提供${top(b.ft)}`:''}，讓配戴的人${fl.length?top(fl):'【請填寫：想帶給客人的感受】'}。`;
+ const kw=[];const push=w=>{if(w&&!kw.some(k=>k.includes(w)||w.includes(k))&&kw.length<3)kw.push(w)};
+ b.vibes.forEach(v=>push(KWV[v]||(len(v)<=4?v:'')));b.ft.forEach(f=>push(KWF[f]));b.feels.forEach(f=>push(f));b.styles.forEach(x=>push(short(x)));
+ S.d1o.kw=J(kw);save();render();toast('完成！可以直接修改成你習慣的說法')}
+
+/* DAY 2 */
+function bios(){const b=B();const kw=(tx('d1o.kw')||'').split(/[、,，]/).filter(Boolean);const cta=bioCTA();
+ const n=b.brand||'品牌名',st=short(b.styles[0]||'');
+ return {names:[`${n}｜穿戴甲`,`${n} ${st}穿戴甲`,b.custom?`${n}｜客製穿戴甲`:`${n}・${kw[0]||st}系穿戴甲`],
+ bios:[`${J(b.styles.slice(0,3).map(short),'・')}穿戴甲${b.custom?'｜1:1 客製':''}\n適合${J(b.cl)}\n${b.sizeTeach?'不會量尺寸？精選「尺寸」有教學':'尺寸與訂購流程看精選'}\n${cta}`,
+  `${kw.length?kw.join('・'):'【品牌關鍵字】'}\n${b.vibe1?b.vibe1+'風格的':''}${st}穿戴甲\n為${b.cl[0]||'【客群】'}而做\n${cta}`,
+  `第一次買穿戴甲也不用擔心\n${b.ft.length?b.ft.map(f=>'✓ '+f).join('\n'):'✓ 【請填寫：你實際提供的服務】'}\n${cta}`]}}
+function day2(){const has=tx('d2o.bio');
+ return shell(2,`${needD1()}
+ ${C('客人要怎麼詢問或購買？','d6.channels',OPT.channels,{hint:'選「其他」請在下方寫出方式。Day 6 會沿用。'})}
+ ${arr('d6.channels').includes('其他')?F('其他方式','d6.chOther',{ph:'例如：蝦皮賣場、FB 粉專'}):''}
+ ${genBtn('gen2',has,'產出名稱與自介')}
+ ${has?`${O('IG 名稱（放在 IG「名稱」欄位，可以被搜尋到）','d2o.name',{rows:1,extra:'<button type="button" class="mini" data-act="v2" data-w="name">換一版</button>'})}
+ ${O('IG 自介','d2o.bio',{rows:5,max:150,extra:'<button type="button" class="mini" data-act="v2" data-w="bio">換一版</button>',note:'上限 150 字元。貼上前確認：陌生人看得懂你賣什麼、特色是什麼、怎麼詢問。'})}
+ <div class="note"><b>頭像：</b>選一張最能代表你的作品，單色背景、放在正中間，縮小後還看得出是指甲就對了。</div>`:''}`)}
+function gen2(){if(!arr('d1.styles').length){toast('請先完成 Day 1');return}
+ if(!arr('d6.channels').length){toast('請選擇詢問方式');return}
+ const x=bios();S.d2.vn=0;S.d2.vb=0;S.d2o.name=x.names[0];S.d2o.bio=x.bios[0];save();render();toast('完成！不喜歡可以按「換一版」')}
+
+/* DAY 3 */
+function day3(){const has=tx('d3o.s1');
+ return shell(3,`${needD1()}
+ <div class="note"><b>為什麼先做這個？</b>陌生人點進帳號，最先看的是頭像下面那排圓圈（精選動態）。先放好「作品、尺寸、訂購」三個，不用做貼文，今天就能完成。</div>
+ ${genBtn('gen3',has,'產出 3 則限動文字')}
+ ${has?`${O('限動 1｜精選名稱：作品','d3o.s1',{rows:5,note:'配圖：你最好看的一副作品實戴照。'})}
+ ${O('限動 2｜精選名稱：尺寸','d3o.s2',{rows:5,note:'配圖：量尺寸的手部照，或你的尺寸片／尺寸表。'})}
+ ${O('限動 3｜精選名稱：訂購','d3o.s3',{rows:6,note:'配圖：品牌色的底圖或作品照都可以。Day 6 填好價格交期後，回來按「重新產出」會自動更新。'})}
+ <div class="note"><b>照著做：</b><br>① 打開 IG，從首頁左上角的「＋」選「限時動態」<br>② 選一張照片，點「Aa」把上面複製的文字貼上，發布<br>③ 發布後打開自己的限動，點下方的「精選」，新增精選並取名（作品／尺寸／訂購）<br>④ 三則都做完，帳號頭像下方就會出現三個精選</div>`:''}`)}
+function gen3(){const b=B();if(!b.styles.length){toast('請先完成 Day 1');return}
+ if(!arr('d6.channels').length){toast('請先到 Day 2 選擇詢問方式');return}
+ const cta=contactCTA();const sw=getP('d6.sizeWay');
+ S.d3o.s1=`${b.name}\n${J(b.styles.map(short))}穿戴甲\n適合${J(b.cl)}\n${cta}`;
+ S.d3o.s2=`第一次買穿戴甲？\n尺寸這樣確認：\n${sw||'【請填寫：你的尺寸確認方式（Day 6 會再補）】'}\n不確定就直接問我`;
+ S.d3o.s3=tx('d6o.flow')?`訂購流程\n${tx('d6o.flow')}\n${cta}`:`訂購方式\n① ${J(b.ch)}詢問\n② 確認款式與尺寸\n③ 付款後製作、出貨\n${cta}`;
+ save();render();toast('完成！照下方步驟發成限動')}
+
+/* DAY 4 */
+function ptags(){const b=B();const s=new Set();[...b.styles,...b.cl,...b.ft].forEach(x=>TAGMAP[x]&&s.add(TAGMAP[x]));return s}
+function ranked(cat,ex){const tg=ptags();const sd=S.d4.seed||0;const sc=t=>t.tags.filter(x=>tg.has(x)).length+(t.f==='輪播'?0.5:0);
+ return TOPICS.filter(t=>t.c===cat&&!ex.has(t.id)).sort((a,b)=>sc(b)-sc(a)||((a.id*7+sd*13)%31)-((b.id*7+sd*13)%31))}
+function recommend(){const rec=[];Object.keys(QUOTA).forEach(c=>ranked(c,new Set(rec)).slice(0,QUOTA[c]).forEach(t=>rec.push(t.id)));S.d4.rec=rec;S.d4.skip=[]}
+function day4(){const rec=(S.d4.rec||[]).map(T).filter(Boolean);
+ return shell(4,`${needD1()}
+ ${genBtn('rec',rec.length,'給我 3 個題目')}
+ ${rec.length?`<div style="margin-top:6px">${rec.map((t,i)=>`<details class="tcard"><summary style="cursor:pointer;list-style:none"><div class="tt">${i+1}. ${esc(t.t)}</div><div class="tags"><span class="tag c">${CAT[t.c].n}</span><span class="tag">${t.f}</span><span class="tag">點開看重點</span></div></summary>
+  <div class="tdet"><b>要講的重點：</b>${t.k.map((k,j)=>`${j+1}. ${esc(k)}`).join('　')}<br><b>結尾一句：</b>${esc(t.c==='D'?contactCTA():CAT[t.c].cta)}</div>
+  <div class="tact"><button class="mini" data-act="swap" data-id="${t.id}">換一題</button></div></details>`).join('')}</div>
+ <div class="note">一週發 1 題就好：<b>第 1 題明天（Day 5）就做</b>，另外兩題接下來兩週各發一篇。發完再回來按「重新產出」拿新題目。</div>`:''}`)}
+
+/* DAY 5 */
+function day5(){const rec=(S.d4.rec||[]).map(T).filter(Boolean);
+ if(!rec.length)return shell(5,`<div class="note warn">請先到 Day 4 拿到你的 3 個題目。</div><button class="btn" data-act="go" data-d="4">前往 Day 4</button>`);
+ const has=tx('d5o.car');
+ return shell(5,`
+ <label class="field"><span class="lb">1. 選一個最好拍的題目</span><select data-k="d5.id"><option value="">— 選擇 —</option>${rec.map(t=>`<option value="${t.id}"${String(getP('d5.id'))===String(t.id)?' selected':''}>${esc(t.t)}</option>`).join('')}</select><small>建議選第 1 題（建立信任），最容易被收藏。</small></label>
+ ${F('2. 一句你的真實經驗或做法','d5.real',{rows:2,ph:'例如：我量尺寸會請客人每一指量兩次，取比較大的數字。'})}
+ ${genBtn('gen5',has,'產出我的第一篇貼文')}
+ ${has?O('7 頁輪播（每頁一句＋配圖）','d5o.car',{rows:16})+O('貼文內文','d5o.cap',{rows:8})+`<div class="note">發布前：把【請填寫】換成你的話、確認圖片裡客人的手有經過同意，就可以發了。</div>`:''}`)}
+function gen5(){const t=T(getP('d5.id'));if(!t){toast('請先選一個題目');return}
+ const real=tx('d5.real');const cta=t.c==='D'?contactCTA():CAT[t.c].cta;
+ S.d5o.car=`P1 封面｜${t.t}\n　配圖：最能說明主題的一張實戴照\n\nP2｜這篇會講 3 件事：${t.k.join('、')}\n　配圖：品牌色底＋條列\n\n${t.k.map((k,i)=>`P${i+3}｜${k}\n　【請填寫：一句你的判斷方式或做法】\n　配圖：${['對比圖','近拍細節','實戴或步驟'][i]||'實拍'}`).join('\n\n')}\n\nP6｜我的經驗\n　${real||'【請填寫：你真實遇過的情況】'}\n　配圖：你的作品或製作過程\n\nP7｜${cta}${t.c==='D'?'':'\n　'+contactCTA()}\n　配圖：品牌色底＋帳號名稱`;
+ S.d5o.cap=`${t.t}\n\n${t.k.map((k,i)=>`${i+1}. ${k}`).join('\n')}\n\n${real||'【請填寫：一兩句你自己的經驗】'}\n\n${cta}${t.c==='D'?'':'\n'+contactCTA()}\n\n${tagsLine()}`;
+ save();render();toast('完成！')}
+
+/* DAY 6 */
+function steps(){const sw=getP('d6.sizeWay');
+ return [['詢問',J(chList())||'【請選擇詢問方式】'],['確認尺寸',sw||'【請選擇尺寸確認方式】'],['報價與付款',or(tx('d6.price'),'價格')],['製作與出貨',or(tx('d6.lead'),'交期')],['收到配戴',or(tx('d6.ship'),'運送方式與運費')]]}
+function day6(){const has=tx('d6o.flow');
+ return shell(6,`
+ <div class="note warn">價格、交期、運費都由你填寫，工具不會幫你假設。</div>
+ ${C('1. 詢問方式','d6.channels',OPT.channels)}
+ ${arr('d6.channels').includes('其他')?F('其他方式','d6.chOther',{ph:'例如：蝦皮賣場、FB 粉專'}):''}
+ ${F('2. 價格','d6.price',{ph:'例如：公版 NT$___ 起／客製依款式報價'})}
+ ${F('3. 多久可以出貨','d6.lead',{ph:'例如：確認後 ___ 個工作天出貨'})}
+ ${C('4. 尺寸怎麼確認','d6.sizeWay',OPT.sizeWay,{multi:false})}
+ ${F('5. 付款與運送','d6.ship',{ph:'例如：轉帳付款；超商取貨 NT$___'})}
+ ${genBtn('gen6',has,'產出下單流程與回覆')}
+ ${has?`<div class="flow">${steps().map((s,i)=>`<div class="fstep"><i>STEP ${i+1}</i><b>${esc(s[0])}</b>${esc(s[1])}</div>`).join('')}</div>
+ ${O('下單流程（放進精選「購買方式」）','d6o.flow',{rows:6})}${O('回覆 1｜有人第一次來問','d6o.r1',{rows:7})}${O('回覆 2｜問價格和尺寸','d6o.r2',{rows:7})}
+ ${/【請填寫/.test(tx('d6o.flow')+tx('d6o.r2'))?'<div class="note warn">還有【請填寫】，補上後按「重新產出」或直接改。</div>':''}`:''}`)}
+function gen6(){if(!arr('d6.channels').length){toast('請選擇詢問方式');return}
+ const s=steps();const sw=getP('d6.sizeWay');
+ S.d6o.flow=s.map((x,i)=>`${'①②③④⑤'[i]} ${x[0]}｜${x[1]}`).join('\n');
+ S.d6o.r1=`你好，謝謝你的詢問！\n想先了解三件事，方便幫你推薦：\n1. 想要的款式（可以附參考圖）\n2. 預計配戴的日期\n3. 知道自己的尺寸嗎？\n回覆我之後，我會再跟你確認細節。`;
+ S.d6o.r2=`價格：${or(tx('d6.price'),'價格')}\n出貨時間：${or(tx('d6.lead'),'交期')}\n\n尺寸：${sw||'【請選擇尺寸確認方式】'}${sw==='客人提供指甲照片由我評估'?'\n請在自然光下把手平放拍正面，旁邊放一把尺會更準。':sw==='客人自行量測後對照尺寸表'?'\n每一指量最寬的地方，左右手分開記錄，量完傳給我幫你對照。':''}\n\n確認好尺寸再下單，戴起來最安心。`;
+ save();render();toast('完成！')}
+
+/* DAY 7 */
+const CHECK=[['bio','IG 名稱與自介已貼上',()=>!!tx('d2o.bio')],['avatar','頭像已更換',()=>!!tx('d2o.bio')],['hl','3 則限動已發布並加入精選',()=>!!tx('d3o.s1')],['post','第一篇貼文已發布',()=>!!tx('d5o.car')],['flow','「訂購」精選已更新成完整流程',()=>!!tx('d6o.flow')],['reply','2 則回覆存進手機（快速回覆）',()=>!!tx('d6o.r1')]];
+function day7(){const liveN=CHECK.filter(c=>getP('d7.'+c[0])).length;
+ return shell(7,`
+ <p style="color:var(--ink2);font-size:14px;margin:0 0 6px">到 IG 上<b>真的做完</b>才打勾。工具裡寫好 ≠ 已經發布。</p>
+ <table class="cl"><tbody>${CHECK.map(([k,l,fn])=>`<tr><td><label class="check" style="margin:0"><input type="checkbox" data-k="d7.${k}"${getP('d7.'+k)?' checked':''} data-re="1"><span>${l}</span></label></td><td class="c"><span class="badge ${fn()?'y':'n'}">${fn()?'工具已準備好':'還沒做'}</span></td></tr>`).join('')}</tbody></table>
+ <div class="note">已在 IG 完成 <b>${liveN} / ${CHECK.length}</b>${liveN===CHECK.length?'　全部完成，你的帳號可以開始經營了！接下來照 10 個題目，一週發 2–3 篇。':''}</div>
+ <div class="gen"><button class="btn" data-act="print">列印／存成 PDF</button><button class="btn ghost" data-act="backup">備份資料</button></div>
+ <small style="color:var(--mute);display:block;margin-bottom:14px">按「列印」後，印表機選「另存為 PDF」就能存成檔案。</small>
+ ${card()}`)}
+const cs=(t,b)=>`<div class="cs"><h4>${t}</h4>${b}</div>`;
+const pre=s=>s?`<div class="pre">${esc(s)}</div>`:'<div class="empty">尚未完成</div>';
+function card(){const b=B();const rec=(S.d4.rec||[]).map(T).filter(Boolean);const kw=(tx('d1o.kw')||'').split(/[、,，]/).filter(Boolean);
+ return `<div class="card"><div class="ch"><div class="eyebrow">RVEA · BRAND LAUNCH CARD</div><h2>我的穿戴甲品牌啟動成果卡</h2><div style="color:var(--ink2);font-size:14px">${esc(b.name)}　・　${new Date().toLocaleDateString('zh-TW')}</div></div>
+ <div class="cols">
+ ${cs('品牌定位',pre(tx('d1o.pos')))}
+ ${cs('品牌關鍵字',kw.length?`<div class="kw">${kw.map(k=>`<span>${esc(k)}</span>`).join('')}</div>`:pre(''))}
+ ${cs('IG 名稱',pre(tx('d2o.name')))}
+ ${cs('IG 自介',pre(tx('d2o.bio')))}
+ ${cs('精選動態',pre(tx('d3o.s1')?'作品　/　尺寸　/　訂購':''))}
+ ${cs('下單流程',pre(tx('d6o.flow')))}
+ ${cs('我的 3 個題目',rec.length?`<div class="pre">${rec.map((t,i)=>`${i+1}. ${esc(t.t)}`).join('\n')}</div>`:pre(''))}
+ ${cs('第一篇貼文',pre(T(getP('d5.id'))&&tx('d5o.car')?T(getP('d5.id')).t:''))}
+ ${cs('啟動檢查',`<div class="pre">${CHECK.map(([k,l])=>`${getP('d7.'+k)?'■':'□'} ${l}`).join('\n')}</div>`)}
+ </div><div style="text-align:center;color:var(--mute);font-size:12px;margin-top:14px;letter-spacing:.1em">RVEA · LIVE EXCLUSIVE GIFT</div></div>`}
+
+/* AI 指令 */
+function ai(n){const b=B();
+ const base=`你是熟悉台灣 Instagram 與穿戴甲品牌的內容顧問，請用台灣繁體中文回答，簡潔、像真人說話。\n【我的品牌】名稱：${b.brand||'未定'}；定位：${tx('d1o.pos')||'未完成'}；款式：${J(b.styles)}；客群：${J(b.cl)}；實際提供的服務：${J(b.ft)||'未填'}\n`;
+ const task={1:'請給我 3 個不同說法的一句品牌定位。',2:`請寫 3 款 IG 自介（每款 150 字元內），讓陌生人立刻知道賣什麼、特色、怎麼詢問（詢問方式：${J(b.ch)||'待補'}）。`,3:'請幫我寫 3 則 IG 限時動態文字，分別放進精選「作品、尺寸、訂購」，每則 3–5 行，新手照著貼就能發。',4:'請再給我 3 個新手用手機就能拍的具體穿戴甲 IG 發文題目，要具體到一看就想點開，不要「分享作品」這種籠統題目。',5:`請把題目「${T(getP('d5.id'))?.t||'待補'}」寫成 7 頁輪播，每頁一句話＋配圖建議。我的真實經驗：${tx('d5.real')||'待補'}`,6:`請依我的資料寫 2 則私訊回覆（第一次詢問、問價格和尺寸）：價格 ${tx('d6.price')||'待補'}；交期 ${tx('d6.lead')||'待補'}；尺寸 ${getP('d6.sizeWay')||'待補'}`,7:`請用第一次看到我帳號的客人角度，指出我的自介哪裡看不懂、要改哪一句：\n${tx('d2o.bio')||'待補'}`}[n];
+ return base+'\n【任務】'+task+'\n\n【規則】只用我給的真實資訊，不足的地方標【待補】；不要編造特色、價格、評價或訂單；不承諾銷量或粉絲數。'}
+
+/* 渲染與事件 */
+const VIEWS={1:day1,2:day2,3:day3,4:day4,5:day5,6:day6,7:day7};
+const cur=()=>{const m=location.hash.match(/day(\d)/);return m?+m[1]:0};
+function render(keep=true){const y=scrollY;const n=cur();document.getElementById('app').innerHTML=n&&VIEWS[n]?VIEWS[n]():home();document.querySelectorAll('[data-cnt]').forEach(updCnt);if(keep)scrollTo(0,y)}
+function go(n){location.hash=n?'day'+n:''}
+addEventListener('hashchange',()=>{render(false);scrollTo(0,0)});
+function updCnt(el){const l=len(getP(el.dataset.cnt)||'');const mx=+el.dataset.max;el.textContent=`${l} / ${mx}`;el.classList.toggle('over',l>mx)}
+function celebrate(act){
+ const btn=app.querySelector(`.gen-btn[data-act="${act}"]`);
+ app.querySelectorAll('.out').forEach((o,i)=>{o.style.animationDelay=(i*60)+'ms';o.classList.add('reveal')});
+ if(!btn||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ btn.classList.remove('pulse');void btn.offsetWidth;btn.classList.add('pulse');
+ const r=btn.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+ for(let i=0;i<14;i++){const e=document.createElement('span');const k=i%3;e.className='spark'+(k===1?' d':k===2?' p':'');e.textContent=k===1?'':(i%2?'✦':'✧');
+  const a=(Math.PI*2*i/14)+Math.random()*.4,d=50+Math.random()*40;
+  e.style.left=cx+'px';e.style.top=cy+'px';e.style.setProperty('--x',Math.cos(a)*d+'px');e.style.setProperty('--y',Math.sin(a)*d+'px');e.style.setProperty('--r',(Math.random()*180-90)+'deg');
+  document.body.appendChild(e);setTimeout(()=>e.remove(),700)}
+}
+const app=document.getElementById('app');
+app.addEventListener('input',e=>{const el=e.target;const k=el.dataset.k;if(!k)return;
+ if(el.type==='checkbox'){setP(k,el.checked);if(el.dataset.re)render();return}
+ setP(k,el.value);const c=app.querySelector(`[data-cnt="${k}"]`);if(c)updCnt(c)});
+app.addEventListener('click',e=>{
+ const chip=e.target.closest('[data-chip]');
+ if(chip){const p=chip.dataset.chip,v=chip.dataset.v,multi=chip.dataset.multi==='1',mx=+chip.dataset.max;
+  if(multi){let a=arr(p).slice();if(a.includes(v))a=a.filter(x=>x!==v);else{if(mx&&a.length>=mx){toast(`最多選 ${mx} 個，先取消一個`);return}a.push(v)}setP(p,a)}else setP(p,getP(p)===v?'':v);
+  render();return}
+ const cp=e.target.closest('[data-copy]');if(cp){copyText(getP(cp.dataset.copy)||'');return}
+ const a=e.target.closest('[data-act]');if(!a)return;const act=a.dataset.act;
+ if(act==='go')return go(+a.dataset.d);if(act==='home')return go(0);
+ const GEN={gen1,gen2,gen3,gen5,gen6};if(GEN[act]){const before=JSON.stringify(S);GEN[act]();if(JSON.stringify(S)!==before)celebrate(act);return}
+ if(act==='v2'){const x=bios();if(a.dataset.w==='name'){S.d2.vn=((S.d2.vn||0)+1)%3;S.d2o.name=x.names[S.d2.vn]}else{S.d2.vb=((S.d2.vb||0)+1)%3;S.d2o.bio=x.bios[S.d2.vb]}save();render();return}
+ if(act==='rec'){if(!arr('d1.styles').length){toast('請先完成 Day 1');return}S.d4.seed=(S.d4.seed||0)+((S.d4.rec||[]).length?1:0);recommend();save();render();celebrate('rec');toast('這是你的 3 個題目');return}
+ if(act==='swap'){const id=+a.dataset.id;const t=T(id);const nx=ranked(t.c,new Set([...S.d4.rec,...(S.d4.skip||[])]))[0];if(!nx){toast('這類沒有其他題目了');return}S.d4.rec=S.d4.rec.map(x=>x===id?nx.id:x);S.d4.skip=[...(S.d4.skip||[]),id];save();render();toast('已換一題');return}
+ if(act==='ai'){copyText(ai(+a.dataset.d));return}
+ if(act==='print'){document.getElementById('printArea').innerHTML=card();print();return}
+ if(act==='backup'){const d=new Date();download(`RVEA_7天啟動包_備份_${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}.json`,JSON.stringify({app:'rvea-7day-lite',v:1,data:S},null,2),'application/json');toast('已下載備份檔');return}
+ if(act==='restore'){document.getElementById('restoreFile').click();return}
+ if(act==='reset'){if(confirm('確定清除所有資料？建議先備份，清除後無法復原。')){S=blank();save();go(0);render()}return}
+});
+app.addEventListener('change',e=>{const el=e.target;if(el.tagName==='SELECT'&&el.dataset.k){setP(el.dataset.k,el.value)}});
+document.getElementById('restoreFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
+ r.onload=()=>{try{const j=JSON.parse(r.result);if(!j||j.app!=='rvea-7day-lite'||typeof j.data!=='object')throw 0;if(!confirm('還原會取代目前的資料，確定嗎？'))return;S=Object.assign(blank(),j.data);save();render();toast('已還原')}catch(err){toast('這不是啟動包的備份檔')}e.target.value=''};r.readAsText(f)});
+addEventListener('beforeprint',()=>{document.getElementById('printArea').innerHTML=card()});
+render(false);
+</script>
+</body>
+</html>
